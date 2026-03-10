@@ -22,7 +22,7 @@ let ciclosDeFoco = 0;
 const musicaInput = document.querySelector('#alternar-musica')
 const musica = new Audio('/sons/luna-rise-part-one.mp3')
 musica.loop = true
-const somIniciar = new Audio('/sons/play.wav')
+const somIniciar = new Audio('./sons/play.wav')
 const somPausar = new Audio('/sons/pause.mp3')
 const somFinalizar = new Audio('/sons/beep.mp3')
 
