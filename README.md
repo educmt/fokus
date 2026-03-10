@@ -51,14 +51,15 @@ Principais conceitos aplicados:
 - Organização de lógica em funções
 
 ---
-## 📷 Demonstração
 
+## 📷 Demonstração
+Endereço do site: https://educmt.github.io/fokus/
 <div align= "center">
   <img width="412" height="272" alt="image" src="https://github.com/user-attachments/assets/a301028e-c9af-48a6-b744-85f435b6cc77" />
   <img width="412" height="272" alt="image" src="https://github.com/user-attachments/assets/f3df5219-836d-4ce1-8385-95be2448d581" />
   <img width="412" height="272" alt="image" src="https://github.com/user-attachments/assets/beb2d241-120c-4990-b1f8-816f5fc00ef2" />
 </div>
 
+---
 ## 📚 Créditos
-
-Projeto desenvolvido com base em aulas da plataforma Alura.
+Projeto desenvolvido com base em aulas da plataforma Alura. Toda a estrutura html e css veio pronta, projeto teve como objetivo o estudo do JavaScript para a manipulação do **DOM**
