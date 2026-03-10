@@ -20,11 +20,11 @@ let ciclosDeFoco = 0;
 
 //sons
 const musicaInput = document.querySelector('#alternar-musica')
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
+const musica = new Audio('./sons/luna-rise-part-one.mp3')
 musica.loop = true
-const somIniciar = new Audio('/sons/play.wav')
-const somPausar = new Audio('/sons/pause.mp3')
-const somFinalizar = new Audio('/sons/beep.mp3')
+const somIniciar = new Audio('./sons/play.wav')
+const somPausar = new Audio('./sons/pause.mp3')
+const somFinalizar = new Audio('./sons/beep.mp3')
 
 musicaInput.addEventListener('change', () => {
     if (musica.paused) {
@@ -56,7 +56,7 @@ function alteraContexto(contexto) {
     botoes.forEach(contexto => contexto.classList.remove('active'))
     
     html.setAttribute('data-contexto', contexto)
-    imgApp.setAttribute('src', `/imagens/${contexto}.png`)
+    imgApp.setAttribute('src', `./imagens/${contexto}.png`)
     switch (contexto) {
         case "foco":
             appTitulo.innerHTML = `Otimize sua produtividade,<br>
