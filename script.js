@@ -114,7 +114,7 @@ const contagemRegressiva = () => {
 }
 
 function iniciarOuPausar(){
-    iniciarPausarBtImg.src = '/imagens/pause.png'
+    iniciarPausarBtImg.src = './imagens/pause.png'
     iniciarPausarBtText.textContent = 'Pausar'
     if(intervaloId){
         somPausar.play()
@@ -127,7 +127,7 @@ function iniciarOuPausar(){
 
 function zerarTemp(){
     clearInterval(intervaloId)
-    iniciarPausarBtImg.src = '/imagens/play_arrow.png'
+    iniciarPausarBtImg.src = './imagens/play_arrow.png'
     iniciarPausarBtText.textContent = 'Começar'
     intervaloId = null;
 }
