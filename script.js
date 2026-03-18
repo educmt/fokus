@@ -104,6 +104,11 @@ const contagemRegressiva = () => {
             alteraContexto('foco')
             focoBt.classList.add('active')
         }
+        // Criando evento custom
+        if (contextoAtual == 'foco') {
+            const evento = new CustomEvent('FocoFinalizado')
+            document.dispatchEvent(evento)
+        }
         
         mostrarTempo()
         zerarTemp()

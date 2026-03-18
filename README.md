@@ -32,6 +32,10 @@ Essa estratégia ajuda a:
 - 🎵 Música ambiente opcional
 - 🔄 Troca automática entre foco e descanso
 - 🎨 Interface dinâmica que muda conforme o contexto
+- 📝 Criação, edição e seleção de tarefas
+- ✅ Marcação de tarefas como concluídas ao final do ciclo
+- 🗑️ Remoção de tarefas (concluídas ou todas)
+- 💾 Persistência de dados no navegador
 
 ---
 
@@ -43,12 +47,51 @@ Essa estratégia ajuda a:
 
 Principais conceitos aplicados:
 
-- Manipulação do **DOM**
-- **Eventos** em JavaScript
-- Controle de tempo com `setInterval`
-- Alteração dinâmica de atributos (`src`, `data-*`)
-- Uso de **dataset**
-- Organização de lógica em funções
+- Manipulação do **DOM**  
+- **Eventos** em JavaScript (click, submit, custom events)  
+- Uso de **LocalStorage** para persistência de dados  
+- Serialização de dados com **JSON (`JSON.stringify` / `JSON.parse`)**  
+- Criação dinâmica de elementos com `createElement`  
+- Atualização de interface em tempo real  
+- Controle de estado da aplicação (tarefas selecionadas e concluídas)  
+- Uso de **eventos customizados** (`FocoFinalizado`)  
+- Manipulação de classes CSS (`classList`)  
+- Organização da lógica em funções reutilizáveis  
+
+---
+
+## 🧠 Lógica da funcionalidade de tarefas
+
+O sistema de tarefas funciona como um complemento ao timer Pomodoro, permitindo que o usuário organize suas atividades enquanto mantém o foco.
+
+### Principais comportamentos:
+
+- As tarefas são armazenadas no **LocalStorage**, garantindo persistência mesmo após recarregar a página  
+- Cada tarefa é representada como um objeto JavaScript contendo:
+  - `descricao`
+  - `completa` (status de conclusão)  
+- A interface é construída dinamicamente com base nesses dados  
+
+### Funcionalidades implementadas:
+
+- **Criação de tarefas** via formulário  
+- **Edição de tarefas** com prompt dinâmico  
+- **Seleção de tarefa ativa**, exibindo sua descrição  
+- **Conclusão automática de tarefas** ao finalizar um ciclo de foco  
+- **Desativação da edição** após conclusão  
+- **Remoção inteligente**:
+  - apenas tarefas concluídas  
+  - ou todas as tarefas  
+
+### Integração com o Timer:
+
+Ao disparar o evento customizado `FocoFinalizado`:
+
+- A tarefa selecionada é marcada como concluída  
+- A interface é atualizada visualmente  
+- O estado é salvo automaticamente  
+
+Isso conecta diretamente **produtividade (timer)** com **organização (tarefas)**.
 
 ---
 
